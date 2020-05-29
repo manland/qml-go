@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/nanu-c/qml-go"
 	"os"
+
+	"github.com/manland/qml-go"
 )
 
 func main() {

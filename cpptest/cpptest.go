@@ -13,11 +13,11 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/nanu-c/qml-go"
+	"github.com/manland/qml-go"
 )
 
 func NewTestType(engine *qml.Engine) qml.Object {
-	var obj qml.Object 
+	var obj qml.Object
 	qml.RunMain(func() {
 		addr := C.newTestType()
 		obj = qml.CommonOf(addr, engine)

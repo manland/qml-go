@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nanu-c/qml-go"
+	"github.com/manland/qml-go"
 )
 
 const test_qml = `

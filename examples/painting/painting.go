@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nanu-c/qml-go"
-	"github.com/nanu-c/qml-go/gl/2.0"
+	"github.com/manland/qml-go"
+	GL "github.com/manland/qml-go/gl/2.0"
 )
 
 func main() {

@@ -9,7 +9,6 @@ import "C"
 import (
 	"errors"
 	"fmt"
-	"github.com/nanu-c/qml-go/gl/glbase"
 	"image"
 	"image/color"
 	"io"
@@ -20,6 +19,8 @@ import (
 	"strings"
 	"sync"
 	"unsafe"
+
+	"github.com/manland/qml-go/gl/glbase"
 )
 
 // Engine provides an environment for instantiating QML components.
@@ -1097,9 +1098,9 @@ func LoadResources(r *Resources) {
 	} else if len(r.bdata) > 0 {
 		base = *(*unsafe.Pointer)(unsafe.Pointer(&r.bdata))
 	}
-	tree := (*C.char)(unsafe.Pointer(uintptr(base)+uintptr(r.treeOffset)))
-	name := (*C.char)(unsafe.Pointer(uintptr(base)+uintptr(r.nameOffset)))
-	data := (*C.char)(unsafe.Pointer(uintptr(base)+uintptr(r.dataOffset)))
+	tree := (*C.char)(unsafe.Pointer(uintptr(base) + uintptr(r.treeOffset)))
+	name := (*C.char)(unsafe.Pointer(uintptr(base) + uintptr(r.nameOffset)))
+	data := (*C.char)(unsafe.Pointer(uintptr(base) + uintptr(r.dataOffset)))
 	C.registerResourceData(C.int(r.version), tree, name, data)
 }
 
@@ -1111,8 +1112,8 @@ func UnloadResources(r *Resources) {
 	} else if len(r.bdata) > 0 {
 		base = *(*unsafe.Pointer)(unsafe.Pointer(&r.bdata))
 	}
-	tree := (*C.char)(unsafe.Pointer(uintptr(base)+uintptr(r.treeOffset)))
-	name := (*C.char)(unsafe.Pointer(uintptr(base)+uintptr(r.nameOffset)))
-	data := (*C.char)(unsafe.Pointer(uintptr(base)+uintptr(r.dataOffset)))
+	tree := (*C.char)(unsafe.Pointer(uintptr(base) + uintptr(r.treeOffset)))
+	name := (*C.char)(unsafe.Pointer(uintptr(base) + uintptr(r.nameOffset)))
+	data := (*C.char)(unsafe.Pointer(uintptr(base) + uintptr(r.dataOffset)))
 	C.unregisterResourceData(C.int(r.version), tree, name, data)
 }

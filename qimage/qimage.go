@@ -13,7 +13,7 @@ import (
 	"runtime"
 	"unsafe"
 
-	"github.com/nanu-c/qml-go/tools/util"
+	"github.com/manland/qml-go/tools/util"
 )
 
 type QImage interface {

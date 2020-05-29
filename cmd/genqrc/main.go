@@ -43,7 +43,7 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/nanu-c/qml-go"
+	"github.com/manland/qml-go"
 )
 
 const doc = `
@@ -165,7 +165,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/nanu-c/qml-go"
+	"github.com/manland/qml-go"
 )
 
 func init() {

@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"unsafe"
 
-	"github.com/nanu-c/qml-go/gl/glbase"
+	"github.com/manland/qml-go/gl/glbase"
 )
 
 // API returns a value that offers methods matching the OpenGL version ES2 API.

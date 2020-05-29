@@ -19,7 +19,7 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/nanu-c/qml-go/cdata"
+	"github.com/manland/qml-go/cdata"
 )
 
 var (

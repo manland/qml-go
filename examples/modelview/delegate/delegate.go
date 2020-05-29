@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/nanu-c/qml-go"
 	"image/color"
 	"math/rand"
 	"os"
 	"time"
+
+	"github.com/manland/qml-go"
 )
 
 func main() {
